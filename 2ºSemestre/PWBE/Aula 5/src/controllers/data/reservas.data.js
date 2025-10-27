@@ -1,0 +1,22 @@
+const reservas = [{
+"id":1,
+"cliente_id":1,
+"quarto_id":1,
+"checkin_data":"2025-10-20",
+"checkout_data":"2025-11-20"
+},
+{
+    "id":2,
+    "cliente_id":3,
+    "quarto_id":2,
+    "checkin_data":"2025-11-20",
+    "checkout_data":"2025-12-30"
+},
+{
+    "id":3,
+    "cliente_id":2,
+    "checkin_data":"2025-01-10",
+    "checkout_data":"2025-02-20"
+}
+];
+module.exports=reservas;

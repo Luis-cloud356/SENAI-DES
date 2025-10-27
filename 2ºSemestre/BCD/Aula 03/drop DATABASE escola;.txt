@@ -1,0 +1,31 @@
+drop DATABASE escola;
+CREATE DATABASE escola;
+USE escola;
+
+CREATE TABLE professores(
+id INT PRIMARY KEY,
+nome VARCHAR(100),
+email VARCHAR(150),
+telefone INTEGER
+);
+CREATE TABLE disciplinas (
+id INT PRIMARY KEY,
+nome VARCHAR(100),
+professor_id INT
+);
+CREATE TABLE turmas (
+id integer PRIMARY KEY,
+periodo VARCHAR(100),
+nome VARCHAR(100)
+);
+CREATE TABLE disciplinas_turma (
+turma_id INTEGER,
+disciplinas_id INTEGER,
+FOREIGN KEY (turma_id) references turmas(id),
+FOREIGN KEY (disciplinas_id) references disciplinas(id)
+);
+
+INSERT INTO professores VALUES(DEFAULT, "Ciclano Sem Rua", "ciclano.semrua@gmail.com", "(19)12345678");
+INSERT INTO disciplinas VALUES(DEFAULT, "Matématica", "1");
+INSERT INTO turmas VALUES(DEFAULT, "Manhã", "A");
+INSERT INTO disciplinas_turma VALUES(1, 2);

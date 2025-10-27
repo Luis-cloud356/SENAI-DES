@@ -1,0 +1,23 @@
+DROP DATABASE if exists musicas;
+CREATE DATABASE musicas;
+USE musicas;
+
+CREATE TABLE artistas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100)
+);
+
+CREATE TABLE albuns (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(100),
+  artista_id INTEGER,
+  FOREIGN KEY (artista_id) REFERENCES artistas(id)
+);
+
+CREATE TABLE faixas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(100),
+  duracao INTEGER,
+  album_id INTEGER,
+  FOREIGN KEY (album_id) REFERENCES albuns(id)
+);

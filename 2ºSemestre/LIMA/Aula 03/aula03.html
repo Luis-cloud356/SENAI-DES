@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+   <center><h1>Lanchonete Seu Zé</h1>
+    <hr>
+    <h3>Peça seu lanche!</h3>
+    </center>
+    <form action=""method="">
+        <p>
+    <label for="nome">Nome Completo</label>
+    <input type="text" id="nome"placeholder="Insira seu nome"required/>
+</p>
+     <p>
+        <label for="datanasc">Data de Nascimento</label>
+        <input id ="datanasc" type="date"/>
+     </p>
+     <p>
+        <label for="Indica">Voce nos indicaria ?</label>
+        <input id="Indica" type="number" min="1"max="5"/>
+     </p>
+     <p>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="informe seu E-mail" required />
+     </p>
+    <p>
+        <label for="cor">Cor Favorita</label>
+        <input id="cor" type="color" />
+    </p>
+    <p>
+        <label for="volume">Em qual volume voce ouve música (0 a 100)</label>
+        <input id="volume" type="range" min="0" max="100" value="50" oninput="valorVolume.textContent = this.value"/>
+        <span id="valorVolume">50</span>
+        <style>
+            #volume {
+                accent-color: rgba(173, 166, 162, 0);
+            }
+        </style>
+    </p>
+    <fieldset>
+        <legend>Genero</legend>
+        <input type="radio" id="masc" name="genero" />
+        <label for="masc">Masculino</label>
+        <style>
+            #masc {
+                accent-color: red;
+            }
+        </style>
+        <input type="radio" id="fem" name="genero" />
+        <label for="fem">Feminino</label>
+        <style>
+            #fem {
+                accent-color: pink;
+            }
+        </style>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Monte seu lanche</legend>
+        <input type="checkbox" id="salada" />
+        <label for="salada">Salada</label>
+   <!-------------------------------------->
+        <input type="checkbox" id="hamb" />
+        <label for="hamb">Hamburguer</label>
+    <!------------------------------------->
+    <input type="checkbox" id="bac" />
+        <label for="bac">Bacon</label>
+    <!------------------------------------->
+    <input type="checkbox" id="ovo" />
+        <label for="ovo">Ovo</label>
+    <!------------------------------------->
+     <input type="checkbox" id="queijo" />
+        <label for="queijo">Queijo</label>
+    <!------------------------------------->
+     <input type="checkbox" id="tomate" />
+        <label for="tomate">Tomate</label>
+    <!------------------------------------->
+    <style>
+        #salada {
+            accent-color: green;
+        }
+        #hamb {
+            accent-color: rgb(139, 69,19);
+        }
+        #bac {
+            accent-color: rgb(237, 103, 7);
+        }
+        #ovo {
+            accent-color: gold;
+        }
+        #queijo {
+            accent-color: rgb(194, 194, 27);
+        }
+        #tomate {
+            accent-color: red;
+        }
+    </style>
+
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Escolha sua Bebida</legend>
+        <input type="checkbox" id="coca-cola">
+        <label for="coca-cola">Coca-Cola</label>
+        <img src="https://www.piramidesdistribuidora.com.br/images/products/3716-coca-cola-lata-350ml-12un.20250626111018.png"width="100"height="120">
+        <img src="https://images.tcdn.com.br/img/img_prod/858764/refrigerante_coca_cola_zero_lata_350ml_c_12_365_1_20201021152513.jpg"width="100"height="100">
+    <!---------------------------------------->
+    <input type="checkbox" id="fanta">
+    <label for="fanta">Fanta</label>
+    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m0a6f0fyvanxec"width="200"height="150">
+    <!---------------------------------------->
+    <input type="checkbox" id="suco">
+    <label for="suco">Suco</label>
+    <img src="https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia19920/beneficios-dos-sucos-naturais-1-alfa-hotel.jpg"width="100"height="100">
+    <style>
+        #coca-cola {
+            accent-color: black;
+        }
+        #fanta {
+            accent-color: rgb(184, 17, 184);
+        }
+        #suco {
+            accent-color: orange;
+        }
+    </style>
+    </fieldset>
+    <br>
+    <label for="info">Informações Adicionais</label>
+    <textarea id="info"></textarea>
+    <br>
+    <label for="cidade">Informe a Cidade para Entrega</label>
+    <select id="cidade">
+        <option>Jaquariúna</option>
+        <option>Amparo</option>
+        <option>Pedreira</option>
+    </select>
+
+</form>
+</body>
+</html>

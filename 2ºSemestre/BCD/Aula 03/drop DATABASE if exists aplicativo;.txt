@@ -1,0 +1,33 @@
+drop DATABASE if exists aplicativo;
+CREATE DATABASE aplicativo;
+USE aplicativo;
+
+CREATE TABLE usuarios (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100),
+email VARCHAR(100)
+);
+CREATE TABLE playlist (
+id INT AUTO_INCREMENT PRIMARY KEY,
+usuario_id INTEGER,
+nome VARCHAR(100),
+FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+CREATE TABLE musicas (
+id INT AUTO_INCREMENT PRIMARY KEY,
+titulo VARCHAR(100),
+artista VARCHAR(100),
+duracao INTEGER
+);
+CREATE TABLE playlist_musica (
+ordem VARCHAR(100),
+id INT AUTO_INCREMENT PRIMARY KEY,
+musica_id INTEGER,
+playlist_id INTEGER,
+FOREIGN KEY (musica_id) REFERENCES musicas(id),
+FOREIGN KEY (playlist_id) REFERENCES playlist(id)
+);
+INSERT INTO usuarios VALUES(DEFAULT, "Beltrano sem Rumo", "beltrano.semrumo@gmail.com");
+INSERT INTO playlist VALUES(DEFAULT, "1", "Internacional");
+INSERT INTO musicas VALUES(DEFAULT, "Billie Jeans", "Michael Jackson", "2");
+INSERT INTO playlist_musica VALUES(DEFAULT, "crescente","1", "1");

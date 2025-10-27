@@ -1,0 +1,38 @@
+drop DATABASE oficina;
+CREATE DATABASE oficina;
+USE oficina;
+
+CREATE TABLE clientes (
+id INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(100),
+cpf VARCHAR(50)
+);
+
+CREATE TABLE veiculos (
+id INT AUTO_INCREMENT PRIMARY KEY,
+modelo VARCHAR(100),
+placa VARCHAR(100),
+categoria VARCHAR(100)
+);
+
+CREATE TABLE contratos (
+id INT AUTO_INCREMENT PRIMARY KEY,
+cliente_id INTEGER,
+veiculo_id INTEGER,
+data_inicio date,
+data_fim date,
+valor decimal(3,2),
+FOREIGN KEY (cliente_id) REFERENCES clientes(id),
+FOREIGN KEY (veiculo_id) REFERENCES veiculos(id)
+);
+CREATE TABLE manutencoes (
+veiculo_id INTEGER,
+tipo VARCHAR(100),
+data date,
+observacao VARCHAR(100),
+FOREIGN KEY (veiculo_id) REFERENCES veiculos(id)
+);
+INSERT INTO clientes VALUES(DEFAULT, "Ciclano sem nome", "12345678");
+INSERT INTO veiculos VALUES(DEFAULT, "Chevete", "ABC1D23", "Conversivel");
+INSERT INTO contratos VALUES(DEFAULT, 1, 1, "2025-08-12", "2025-09-12", 200.50);
+INSERT INTO manutencoes VALUES("1", "Troca de batéria", "2025-08-12", "A batéria está descarregada");

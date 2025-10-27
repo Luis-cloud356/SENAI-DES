@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checklist SQL - EscolaAT (Busca)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .header img {
+      max-height: 50px;
+      width: auto;
+    }
+    .header #sesi {
+      max-height: 80px;
+      width: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #0056b3;
+    }
+    h2 {
+      color: #0056b3;
+      margin-top: 30px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 10px 0;
+      background-color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    label {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+
+  <h1>Checklist SQL – EscolaAT (Busca)</h1>
+  <form>
+
+    <h2>Busca Simples</h2>
+    <ul>
+      <li>
+        <input type="checkbox" id="search1" />
+        <label for="search1">Busque todos os alunos da turma "segundo".</label>
+      </li>
+      <li>
+        <input type="checkbox" id="search2" />
+        <label for="search2">Liste todos os professores com data de nascimento antes de 1985.</label>
+      </li>
+      <li>
+        <input type="checkbox" id="search3" />
+        <label for="search3">Mostre as matérias ministradas pelo professor "Robson".</label>
+      </li>
+      <li>
+        <input type="checkbox" id="search4" />
+        <label for="search4">Liste os alunos que nasceram no mês de julho.</label>
+      </li>
+      <li>
+        <input type="checkbox" id="search5" />
+        <label for="search5">Busque todas as turmas do ano "terceiro".</label>
+      </li>
+    </ul>
+
+    <h2>Consultas com Funções</h2>
+    <ul>
+      <li>
+        <input type="checkbox" id="concat1" />
+        <label for="concat1">Mostrar nome completo do aluno com o e-mail (ex: "Nome - Email").</label>
+      </li>
+      <li>
+        <input type="checkbox" id="max1" />
+        <label for="max1">Encontrar a data de nascimento mais antiga entre os alunos.</label>
+      </li>
+      <li>
+        <input type="checkbox" id="lower1" />
+        <label for="lower1">Exibir os nomes dos alunos em letras minúsculas.</label>
+      </li>
+      <li>
+        <input type="checkbox" id="upper1" />
+        <label for="upper1">Exibir os nomes das turmas em letras maiúsculas.</label>
+      </li>
+      <li>
+        <input type="checkbox" id="round1" />
+        <label for="round1">Arredonde a média do ano de nascimento dos alunos para número inteiro.</label>
+      </li>
+    </ul>
+
+    <h2>Data e Hora</h2>
+    <ul>
+      <li>
+        <input type="checkbox" id="curdate1" />
+        <label for="curdate1">Listar alunos nascidos antes da data atual.</label>
+      </li>
+    </ul>
+
+    <h2>Filtros por Data</h2>
+    <ul>
+      <li>
+        <input type="checkbox" id="year1" />
+        <label for="year1">Mostrar o ano de nascimento dos professores.</label>
+      </li>
+      <li>
+        <input type="checkbox" id="month1" />
+        <label for="month1">Listar alunos nascidos no mês de janeiro.</label>
+      </li>
+    </ul>
+
+  </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    font-family: "Sagoe UI", sans-serif;
+    margin:0;
+    background-color:#f5f7fa;
+    color:#333;
+    justify-items: center;
+}
+img {
+    width: 250px;
+    
+}
+header{
+    color:black;
+    padding: 20px;
+    text-align:center;
+}
+header h1{
+    margin: 0;
+    font-size: 28px;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}

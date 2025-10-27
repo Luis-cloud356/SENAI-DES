@@ -1,0 +1,5 @@
+USE locadora;
+
+SELECT
+SUM(preco) AS "Total"
+FROM locacoes;
