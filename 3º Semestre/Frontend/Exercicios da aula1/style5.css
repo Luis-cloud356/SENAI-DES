@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h2{
+    color:red;
+}
+.cabeca{
+    background: black;
+    background-size: cover;
+    padding: 20px 100vh;
+    justify-content: top;
+    margin-bottom: 150px;
+}
+
+body{
+    background-image: url('multas.jpg');
+    font-family: Arial, sans-serif;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    margin: 0;
+}
+
+input{
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input::placeholder{
+    color: rgb(48, 48, 255);
+}
+button{
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+a{
+    
+    text-decoration: none;
+    
+}
+
+button:hover{
+    background-color: blanchedalmond;
+    transition: 0.2 ease;
+}
+p{
+    margin: 10px;
+    color: #333;
+}
