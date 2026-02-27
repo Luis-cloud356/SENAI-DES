@@ -6,10 +6,8 @@ const novoCarro = async (req, res) => {
     if (carros.length < 7)
         console.log("Placa Incorreta");
 
-
-    let placa = carro.placa;
-    if (carro.placa.some(p => p = placa))
-        res.status(400).json({ message: "Placa ja existe" });
+    if(carros.length < 4)
+        console.log("Ano errado")
 
     if (typeof (carro.ano) == "number")
        res.status(400).json({message: "Ano errado!"});
@@ -53,18 +51,18 @@ const atualizarCarro = async (req, res) => {
     const { id } = req.params;
     const dados = req.body;
 
-    const turma = await prisma.turmas.update({
+    const carro = await prisma.carros.update({
         where: { id },
         data: dados
     });
 
-    res.json(turma).status(200).end();
+    res.json(carro).status(200).end();
 };
 
 module.exports = {
-    novaTurma,
-    listarTurmas,
-    buscarTurma,
-    apagarTurma,
-    atualizarTurma
+    novoCarro,
+    listarCarros,
+    buscarCarro,
+    apagarCarro,
+    atualizarCarro
 }

@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: #222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    padding: 8px 15px;
+    border:none;
+    cursor:pointer;
+}
+
+#carrinho {
+   background-image: url("https://cdn-icons-png.flaticon.com/512/5087/5087847.png");
+   background-size: cover;
+   width: 50px;
+   height: 50px;
+
+}
