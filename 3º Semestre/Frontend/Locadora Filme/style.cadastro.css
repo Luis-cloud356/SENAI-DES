@@ -62,3 +62,7 @@ th {
     display: flex;
     justify-content: space-between;
 }
+body{
+    background: url("https://img.freepik.com/fotos-gratis/colagem-de-fundo-de-filme_23-2149876005.jpg");
+    background-size: cover;
+}
